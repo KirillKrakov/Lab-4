@@ -23,17 +23,15 @@ public class Carlson extends Human implements Flyable {
     public void turnIntoGhost(){
         class Ghost{
             private String ghostName;
-            private Human alterEgo;
-            Ghost(String ghostName, Human alterEgo){
+            Ghost(String ghostName){
                 this.ghostName = ghostName;
-                this.alterEgo = alterEgo;
             }
             public void turning(){
-                System.out.println(alterEgo.getName() + " превращается в " + ghostName);
-                alterEgo.setName(ghostName);
+                System.out.println(Carlson.this.getName() + " превращается в " + ghostName);
+                Carlson.this.setName(ghostName);
             }
         }
-        Ghost ghost = new Ghost("Привидение из Вазастана",this);
+        Ghost ghost = new Ghost("Привидение из Вазастана");
         ghost.turning();
     }
 }

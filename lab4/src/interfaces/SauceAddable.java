@@ -3,5 +3,5 @@ package interfaces;
 import foods.Food;
 
 public interface SauceAddable {
-    void addSauce(Food food);
+    void addSauce();
 }

@@ -9,12 +9,12 @@ public class AppleCasserole extends Food {
     public void addVanillaSauce(){
         SauceAddable vanillaSauce = new SauceAddable() {
             @Override
-            public void addSauce(Food food) {
-                System.out.println("В " + food.getName() + " добавляется ванильный соус");
-                food.setName(food.getName() + " c ванильным соусом");
+            public void addSauce() {
+                System.out.println("В " + AppleCasserole.this.getName() + " добавляется ванильный соус");
+                AppleCasserole.this.setName(AppleCasserole.this.getName() + " c ванильным соусом");
             }
         };
-        vanillaSauce.addSauce(this);
+        vanillaSauce.addSauce();
     }
     public static class AppleCasseroleRecipe extends Recipe{
         String[] ingredients = {"Сливочное масло 10 шт", "яблоко 4 шт.", "пшеничная мука 4 ст.л.", "молоко 250 мл", "куриное яйцо 4 шт.", "сахарная пудра 6 ст.л.", "соль щеп."};

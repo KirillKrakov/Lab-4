@@ -120,7 +120,7 @@ public abstract class Human implements AbleToUse, Movable, SoundMaker, AbleToFee
             return bodyPartName + " " + name;
         }
         public void wash(Item itemForWashing){
-            System.out.println(name + " моет " + bodyPartName + " в " + itemForWashing.getName() + " " + location);
+            System.out.println(Human.this.name + " моет " + bodyPartName + " в " + itemForWashing.getName() + " " + Human.this.location);
             this.bodyPartName = "чисто вымытые " + bodyPartName;
         }
     }
